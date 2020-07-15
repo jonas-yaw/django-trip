@@ -1,0 +1,101 @@
+@font-face {
+  font-family: "CHILLER";
+  src: url("../css/CHILLER.TTF");
+}
+
+#home-container {
+  display: flex;
+}
+
+.one-half-section,
+.two-half-section {
+  width: 50%;
+  height: 450px;
+}
+
+#logo-representation div {
+  width: 200px;
+  height: 200px;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin: auto;
+  margin-top: 4%;
+}
+
+#articles-button-div {
+  text-align: right;
+}
+
+#articles-button-div a,
+#signup-div a {
+  text-decoration: none;
+}
+
+#articles-button-div button {
+  border: 1px solid black;
+  padding: 14px 20px;
+  background-color: #7a0e0e;
+  color: white;
+  font-family: "CHILLER";
+  font-size: 28px;
+  margin: 3% 15% 0 0;
+  cursor: pointer;
+  transition: 0.6s;
+}
+
+#signup-div {
+  text-align: center;
+  font-weight: 800;
+  font-size: 20px;
+  margin: 6% 0 0 0;
+}
+
+#signup-div button {
+  padding: 12px 14px;
+  border: transparent;
+  border-radius: 10px;
+  font-weight: bold;
+  color: white;
+  background-color: #7a0e0e;
+  margin-right: 5px;
+  cursor: pointer;
+  transition: 0.6s;
+  font-size: 15px;
+}
+
+#signup-div button:hover,
+#articles-button-div button:hover {
+  background-color: transparent;
+  color: black;
+}
+
+#inside-section {
+  max-width: 80%;
+  margin: 0 auto;
+  display: flex;
+}
+
+.inside-div-1 {
+  width: 40%;
+}
+
+.inside-div-2 {
+  width: 60%;
+}
+
+.inside-div-2 p {
+  width: 50%;
+  margin: 20% 0 0 0;
+  font-size: 19px;
+  font-weight: 900;
+}
+
+.home-image-div {
+  width: 160px;
+  height: 160px;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin: 16% 0 8% 0;
+}

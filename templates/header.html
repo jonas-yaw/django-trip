@@ -1,0 +1,24 @@
+<header>
+  <nav>
+    <div id="first-half-div">
+      <ul>
+        <li class="one-half-link"><a href="{% url 'home' %}">HOME</a></li>
+        <li class="one-half-link"><a href="{}">ARTICLES</a></li>
+        <li class="one-half-link"><a href="{}">ABOUT</a></li>
+      </ul>
+    </div>
+    <div id="logo-div">
+      <a href="{% url 'home' %}"> DJANGO TRIP<br /><span> BY JONAS</span> </a>
+    </div>
+    <div id="second-half-div">
+      <ul>
+        <li class="two-half-link"><a href="{}">SUGGEST</a></li>
+        {% if user.is_authenticated%}
+        <li class="two-half-link"><a href="{% url 'logout' %}">LOG OUT</a></li>
+        {% else %}
+        <li class="two-half-link"><a href="{% url 'login' %}">LOG IN</a></li>
+        {% endif %}
+      </ul>
+    </div>
+  </nav>
+</header>

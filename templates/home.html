@@ -1,0 +1,61 @@
+{% load static %}
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>HOME</title>
+  <link
+    rel="shortcut icon"
+    type="image/png"
+    href="{% static 'img/logo.png' %}"
+  />
+
+  <!-- css library -->
+  <link rel="stylesheet" type="text/css" href="{% static 'css/base.css' %}" />
+  <link rel="stylesheet" type="text/css" href="{% static 'css/home.css' %}" />
+  <link rel="stylesheet" href="{% static 'css/font-awesome.min.css' %}" />
+
+</head>
+<body style="background-image: url('/static/img/home-background.png');">
+  {% include 'header.html' %}
+  <div id="home-container">
+    <div class="one-half-section">
+      <div id="inside-section">
+        <div class="inside-div-1">
+          <div class="home-image-div" style="background-image: url('/static/img/motivate.jpg');"></div>
+          <div class="home-image-div" style="background-image: url('/static/img/writings.png');"></div>
+        </div>
+        <div class="inside-div-2">
+          <p>
+            jump on a ride with
+            Jonas as he takes a 
+            journey on Django.
+            Jonas writes about his 
+            experiences , 
+            how he 
+            ended up making this 
+            blog and what's ahead
+            of his Django journey
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="two-half-section">
+      <div id="logo-representation">
+        <div style="background-image: url('/static/img/logo.png');"></div>
+      </div>
+      <div id="articles-button-div">
+        <a href="{}"><button>SEE ARTICLES</button></a>
+      </div>
+      {% if not user.is_authenticated %}
+      <div id="signup-div">
+        <p><a href="{% url 'signup' %}"><button>sign up</button></a> to get a notification when a new<br>
+        blog comes in
+        </p>
+      </div>
+      {% endif %}
+    </div>
+  </div>
+  {% include 'footer.html' %}
+</body>
+</html>
