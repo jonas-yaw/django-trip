@@ -34,6 +34,7 @@ INSTALLED_APPS = [
     # local apps
     "home.apps.HomeConfig",
     "accounts.apps.AccountsConfig",
+    "articles.apps.ArticlesConfig",
     # -----------------------------
     "django.contrib.admin",
     "django.contrib.auth",
@@ -103,7 +104,7 @@ AUTH_PASSWORD_VALIDATORS = [
 
 LANGUAGE_CODE = "en-us"
 
-TIME_ZONE = "UTC"
+TIME_ZONE = "Africa/Algiers"
 
 USE_I18N = True
 
@@ -121,3 +122,5 @@ LOGIN_REDIRECT_URL = "home"
 LOGOUT_REDIRECT_URL = "home"
 
 AUTH_USER_MODEL = "accounts.CustomUser"
+MEDIA_ROOT = os.path.join(BASE_DIR, "static/upload_images")
+MEDIA_URL = "/media/"
