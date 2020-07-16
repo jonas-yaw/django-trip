@@ -1,7 +1,7 @@
 /* css file for the header and footer and styles which apply to all files*/
 @font-face {
   font-family: "Bahnschrift";
-  src: url("../css/Bahnschrift.ttf");
+  src: url("../fonts/Bahnschrift.ttf");
 }
 
 body {
@@ -101,4 +101,9 @@ footer div p a {
 
 #copright-paragraph {
   font-size: 14px;
+}
+
+button:focus,
+a:focus {
+  outline: none;
 }

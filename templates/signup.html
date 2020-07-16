@@ -11,18 +11,48 @@
 
   <!-- css library -->
   <link rel="stylesheet" type="text/css" href="{% static 'css/base.css' %}" />
-  <link rel="stylesheet" type="text/css" href="{% static 'css/login.css' %}" />
+  <link rel="stylesheet" type="text/css" href="{% static 'css/login_and_logout.css' %}" />
   <link rel="stylesheet" href="{% static 'css/font-awesome.min.css' %}" />
 
 </head>
-<body style="background-image: url('/static/img/home-background.png');">
+<body style="background-image: url('/static/img/signup.png');">
   {% include 'header.html' %}
-    <div>
+    <div id="signup-main-div">
+      <div id="title-div-2">
+        <h1>SIGN UP</h1>
+      </div>
+      <div id="two-div-container">
+        <div id="one-div">
         <form method="POST">
             {% csrf_token %}
-            {{ form.as_p }}
-            <button>sign up</button>
+            <div class="inside-form-div">
+              {% for field in form %}
+              <div>
+              <p class="error-paragraph">{{ field.errors }}</p>
+              <input class="input-fields"
+              id="{{ field.id_for_label }}" maxlength="255"
+              name="{{ field.html_name }}" value="{{ field.intial }}" 
+              type="{{ field.field.widget.input_type }}"
+              placeholder="{{ field.label }}">
+            </div>
+            {% endfor %}
+            </div>
+            <br/>
+            <button type="submit">sign up</button>
         </form>
+        </div>
+
+        <div id="two-div">
+          <p>
+            By signing up,<br>
+            we will<br>
+            send you<br>
+            a notification<br>
+            when a new post<br>
+            comes in<br>
+          </p>
+        </div>
+      </div>
     </div>
   {% include 'footer.html' %}
 </body>
