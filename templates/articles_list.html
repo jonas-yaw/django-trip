@@ -2,7 +2,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>HOME</title>
+  <title>ARTICLES</title>
   <link
     rel="shortcut icon"
     type="image/png"
@@ -15,18 +15,30 @@
   <link rel="stylesheet" href="{% static 'css/font-awesome.min.css' %}" />
 
 </head>
-<body style="background-image: url('/static/img/home-background.png');">
+<body style="background-image: url('/static/img/article-background.png');">
     {% include 'header.html' %}
+    <div id='article-list-main-div'>
+        <div id='article-heading-div'>
+            <div><h1>ARTICLES</h1></div>
+            {% if user.username == 'Jonas' %}
+            <div id='new-link-div'><h3><a href="{% url 'article_create' %}">+ New</a></h3></div>
+            {% endif %}
+        </div>
 
-    <div>
+    <div id='article-outer-div'>
         {% for object in object_list %}
-        <h1>
-        <a href="{% url 'articledetail' object.slug %}">{{ object.title }}</a>
-        </h1>
-        <p>{{ object.description }}</p>
+          <div class='article-inner-divs'>
+            <div>
+            <h3>{{ object.title }}</h3>
+            <p>{{ object.description }}</p>
+            <div class='button-link-div'>
+            <a href="{% url 'article_detail' object.slug %}"><button>see full article</button></a>
+            </div>
+            </div>
+        </div>
         {% endfor %}
     </div>
-  
+    </div>
   {% include 'footer.html' %}
 </body>
 </html>

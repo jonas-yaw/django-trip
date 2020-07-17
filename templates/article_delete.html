@@ -1,0 +1,38 @@
+{% load static %}
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ARTICLES</title>
+  <link
+    rel="shortcut icon"
+    type="image/png"
+    href="{% static 'img/logo.png' %}"
+  />
+
+  <!-- css library -->
+  <link rel="stylesheet" type="text/css" href="{% static 'css/base.css' %}" />
+  <link rel="stylesheet" type="text/css" href="{% static 'css/article_alter.css' %}" />
+  <link rel="stylesheet" href="{% static 'css/font-awesome.min.css' %}" />
+
+</head>
+<body style="background-image: url('/static/img/new-article.png');">
+    {% include 'header.html' %}
+
+    <div id='delete-form-div'>
+        <h1>DELETE</h1>
+
+        <form method="POST" >
+        {% csrf_token %}
+            <div>
+                <p>Are you sure you want to delete {{ article.title }}</p>
+            </div>
+            <button type='submit'>confirm</button>
+        </form>
+
+    </div
+
+
+    <div class='clear-padding'></div>
+  {% include 'footer.html' %}
+</body>
+</html>

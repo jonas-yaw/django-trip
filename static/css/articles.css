@@ -1,0 +1,134 @@
+@font-face {
+  font-family: "Century_Gothic_Regular";
+  src: url("../fonts/Century_Gothic_Regular.ttf");
+}
+
+#article-list-main-div,
+#article-detail-main-div {
+  max-width: 90%;
+  margin: auto;
+  min-height: 455px;
+  margin-bottom: 8%;
+}
+
+#article-detail-main-div {
+  margin-top: 5%;
+}
+
+#article-heading-div {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 0 3.5% 0;
+}
+
+#article-detail-heading-div {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 5%;
+}
+
+#article-heading-div h1 {
+  font-size: 55px;
+  margin: 0;
+}
+
+#article-title-div {
+  width: 50%;
+}
+
+#article-title-div h1 {
+  margin: 0;
+  text-transform: uppercase;
+  font-family: "Century_Gothic_Regular";
+  word-spacing: 2px;
+}
+
+#article-title-div h1 span {
+  font-size: 14px;
+  margin-left: 1%;
+}
+
+#new-link-div,
+#article-edit-div {
+  margin: 0 2% 0 0;
+}
+
+#article-edit-div {
+  border: 1px solid black;
+}
+
+#article-edit-div a {
+  text-decoration: none;
+  color: black;
+  transition: 0.6s;
+  padding: 0 10px 10px;
+}
+
+#new-link-div a {
+  text-decoration: none;
+  color: black;
+  font-weight: 800;
+  transition: 0.6s;
+}
+
+#new-link-div a:hover,
+#article-edit-div a:hover {
+  color: #7a0e0e;
+}
+
+.article-inner-divs {
+  border: 1px solid black;
+  border-radius: 20px;
+  width: 35%;
+  background-color: white;
+}
+
+.article-inner-divs:nth-child(even) {
+  background-color: #7a0e0e;
+  margin-left: 58%;
+  color: white;
+}
+
+.article-inner-divs div {
+  margin: 3%;
+}
+
+.article-inner-divs h3 {
+  font-family: "Century_Gothic_Regular";
+  text-transform: uppercase;
+  margin: 0;
+}
+
+.button-link-div {
+  text-align: right;
+}
+
+.button-link-div a {
+  text-decoration: none;
+}
+
+.button-link-div a button {
+  padding: 8px 14px;
+  color: white;
+  border: 1px solid black;
+  border-radius: 15px;
+  background-color: #7a0e0e;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.6s;
+}
+
+.button-link-div a button:hover {
+  background-color: transparent;
+  color: black;
+}
+
+.article-image-div {
+  width: 200px;
+  height: 200px;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  border: 1px solid black;
+}

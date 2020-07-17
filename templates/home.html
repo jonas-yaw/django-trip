@@ -45,7 +45,7 @@
         <div style="background-image: url('/static/img/logo.png');"></div>
       </div>
       <div id="articles-button-div">
-        <a href="{}"><button>SEE ARTICLES</button></a>
+        <a href="{% url 'articles_list' %}"><button>SEE ARTICLES</button></a>
       </div>
       {% if not user.is_authenticated %}
       <div id="signup-div">

@@ -1,0 +1,40 @@
+{% load static %}
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ARTICLE DETAIL</title>
+  <link
+    rel="shortcut icon"
+    type="image/png"
+    href="{% static 'img/logo.png' %}"
+  />
+
+  <!-- css library -->
+  <link rel="stylesheet" type="text/css" href="{% static 'css/base.css' %}" />
+  <link rel="stylesheet" type="text/css" href="{% static 'css/articles.css' %}" />
+  <link rel="stylesheet" href="{% static 'css/font-awesome.min.css' %}" />
+
+</head>
+<body style="background-image: url('/static/img/article-detail.png');">
+    {% include 'header.html' %}
+    <div id='article-detail-main-div'>
+        <div id='article-detail-heading-div'>
+            <div id='article-title-div'>
+                <h1>{{ object.title }} <span> by {{ object.author }} | {{ object.date }}</span></h1>
+            </div>
+            {% if user.username == 'Jonas' %}
+            <div id='article-edit-div'>
+            <p><a href="{% url 'article_update' object.slug %}">EDIT</a> | <a href="{% url 'article_delete' object.slug %}">DELETE</a></p>
+            </div>
+            {% endif %}
+        </div>
+
+        <div id='article-body-div'>
+            <div class='article-image-div' style="background-image: url({{ object.image.url }});"></div>
+            <p>{{ object.body }}</p>
+        </div>
+
+    </div>
+  {% include 'footer.html' %}
+</body>
+</html>

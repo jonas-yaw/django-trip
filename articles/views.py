@@ -17,7 +17,8 @@ class ArticleDetailView(DetailView):
 class ArticleCreateView(CreateView):
     template_name = "article_create.html"
     model = Article
-    fields = ("title", "description", "image", "body", "author")
+    fields = ("title", "description", "image", "body")
+    success_url = reverse_lazy("articles_list")
 
 
 class ArticleUpdateView(UpdateView):
