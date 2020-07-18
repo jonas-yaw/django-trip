@@ -17,7 +17,7 @@ class Article(models.Model):
     date = models.DateTimeField(auto_now_add=True)
     author = models.CharField(default=author_default, max_length=144)
 
-    slug = models.SlugField(max_length=255, blank=True ,default=slug_default)
+    slug = models.SlugField(max_length=255, blank=True, default=slug_default)
 
     def save(self, *args, **kwargs):
         self.slug = self.title.replace(" ", "-")
@@ -26,5 +26,5 @@ class Article(models.Model):
     def __str__(self):
         return self.title
 
-    def get_absolut_url(self):
+    def get_absolute_url(self):
         return reverse("article_detail", kwargs={"slug": self.slug})

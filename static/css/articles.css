@@ -12,7 +12,9 @@
 }
 
 #article-detail-main-div {
+  max-width: 82%;
   margin-top: 5%;
+  margin-bottom: 6%;
 }
 
 #article-heading-div {
@@ -124,6 +126,13 @@
   color: black;
 }
 
+#article-body-div {
+  background-color: rgba(200, 200, 200, 0.8);
+  border: none;
+  margin: 0% 15% 1% 6%;
+  overflow: hidden;
+}
+
 .article-image-div {
   width: 200px;
   height: 200px;
@@ -131,4 +140,10 @@
   background-size: cover;
   background-repeat: no-repeat;
   border: 1px solid black;
+  float: left;
+  margin: 3%;
+}
+
+#article-body-div p {
+  padding: 6%;
 }
