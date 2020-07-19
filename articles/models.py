@@ -1,6 +1,7 @@
 from django.db import models
 from accounts.models import CustomUser
 from django.urls import reverse
+from django.contrib.auth import get_user_model
 
 
 class Article(models.Model):
@@ -28,3 +29,15 @@ class Article(models.Model):
 
     def get_absolute_url(self):
         return reverse("article_detail", kwargs={"slug": self.slug})
+
+
+class Comment(models.Model):
+    article = models.ForeignKey(Article, on_delete=models.CASCADE)
+    comment = models.CharField(max_length=140)
+    author = models.ForeignKey(get_user_model(), on_delete=models.CASCADE)
+
+    def __str__(self):
+        return self.comment
+
+    def get_absolute_url(self):
+        return reverse("article_detail", kwargs={"slug": self.article.slug})

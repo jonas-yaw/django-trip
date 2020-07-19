@@ -20,18 +20,41 @@
     <div id='article-detail-main-div'>
         <div id='article-detail-heading-div'>
             <div id='article-title-div'>
-                <h1>{{ object.title }} <span> by {{ object.author }} | {{ object.date }}</span></h1>
+                <h1>{{ article.title }}<br><span>by {{ article.author }} | {{ article.date }}</span></h1>
             </div>
             {% if user.username == 'Jonas' %}
             <div id='article-edit-div'>
-            <p><a href="{% url 'article_update' object.slug %}">EDIT</a> | <a href="{% url 'article_delete' object.slug %}">DELETE</a></p>
+            <p><a href="{% url 'article_update' article.slug %}">EDIT</a> | <a href="{% url 'article_delete' article.slug %}">DELETE</a></p>
             </div>
             {% endif %}
         </div>
 
         <div id='article-body-div'>
-            <div class='article-image-div' style="background-image: url({{ object.image.url }});"></div>
-            <p>{{ object.body }}</p>
+            <div class='article-image-div' style="background-image: url({{ article.image.url }});"></div>
+            <p class='article-paragraph'>{{ article.body }}</p>
+            <div class='clear-padding'></div>
+            <p id='comment-intro-paragraph'>COMMENTS</p>
+            {% for comment in article.comment_set.all %}
+            <div class='comment-div'>
+              <div>
+                <p class='author-paragraph'>{{ comment.author.username }}</p>
+                <p class='comment-paragraph'>{{ comment }}</p>
+              </div>
+            </div>
+            {% endfor %}
+            <form method="POST" id='comment-form-div'>
+            {% csrf_token %}
+            <div>
+              {% for field in form %}
+              <input class="comment-fields"
+              id="{{ field.id_for_label }}" maxlength="144"
+              name="{{ field.html_name }}" value="{{ field.intial }}" 
+              type="{{ field.field.widget.input_type }}"
+              placeholder="leave a comment here">
+              {% endfor %}
+              <button type='submit'>send</button>
+            </div>
+            </form>
         </div>
 
     </div>
