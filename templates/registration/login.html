@@ -35,7 +35,7 @@
               placeholder="{{ field.label }}">
             </div>
             {% endfor %}
-            <p class="sub-paragraph"><a href="{}">I can't remember my password</a></p>
+            <p class="sub-paragraph"><a href="{% url 'password_reset' %}">I can't remember my password</a></p>
             </div>
             <button type="submit">log in</button>
         </form>
