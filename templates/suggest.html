@@ -1,0 +1,47 @@
+{% load static %}
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>HOME</title>
+  <link
+    rel="shortcut icon"
+    type="image/png"
+    href="{% static 'img/logo.png' %}"
+  />
+
+  <!-- css library -->
+  <link rel="stylesheet" type="text/css" href="{% static 'css/base.css' %}" />
+  <link rel="stylesheet" type="text/css" href="{% static 'css/about-suggest.css' %}" />
+  <link rel="stylesheet" href="{% static 'css/font-awesome.min.css' %}" />
+
+</head>
+<body style="background-image: url('/static/img/suggest.png');">
+  {% include 'header.html' %}
+  <div class="about-suggest-container">
+    <div id='suggest-intro-paragraph'>
+        <p>
+            Please help me make this website a better one and help me on
+            my journey to mastering Django by sharing with me your reviews
+            and thoughts on this website and the articles and any other
+            helpful suggestions. 
+            Thank you
+        </p>
+    </div>
+
+    <form method="POST" id='suggest-form'>
+    {% csrf_token %}
+    <div>
+        {% for field in form %}
+        <input class="comment-fields"
+        id="{{ field.id_for_label }}"
+        name="{{ field.html_name }}" value="{{ field.intial }}" 
+        type="{{ field.field.widget.input_type }}"
+        placeholder="suggest">
+        {% endfor %}
+    </div>
+        <button type='submit'>send</button>
+    </form>
+  </div>
+  {% include 'footer.html' %}
+</body>
+</html>

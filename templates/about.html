@@ -1,0 +1,56 @@
+{% load static %}
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>HOME</title>
+  <link
+    rel="shortcut icon"
+    type="image/png"
+    href="{% static 'img/logo.png' %}"
+  />
+
+  <!-- css library -->
+  <link rel="stylesheet" type="text/css" href="{% static 'css/base.css' %}" />
+  <link rel="stylesheet" type="text/css" href="{% static 'css/about-suggest.css' %}" />
+  <link rel="stylesheet" href="{% static 'css/font-awesome.min.css' %}" />
+
+</head>
+<body style="background-image: url('/static/img/about.png');">
+  {% include 'header.html' %}
+  <div class="about-suggest-container">
+    <div id='left-div'>
+        <h1>ABOUT WEBSITE</h1>
+        <p>
+        TheupsidetoDjango’sapproachisthatitisincrediblyeasytocustomize
+        anypieceof our website. 
+        The downside is Django requires a bit more out-of-the-box code than somecompetingweb
+        frameworks.Asyoubecomemoreandmoreexperiencedinweb development, the wisdom of Django’s 
+        approach will ring true.TheupsidetoDjango’sapproachisthatitisincrediblyeasy
+        tocustomizeanypieceof our website. 
+        The downside is Django requires a bit more out-of-the-box code than somecompetingweb
+        frameworks.Asyoubecomemoreandmoreexperiencedinweb development, the wisdom of Django’s 
+        approach will ring 
+        true.
+        </p>
+    </div>
+    <div id='right-div'>
+        <h1>ABOUT DEVELOPER</h1>
+        <p>
+        TheupsidetoDjango’sapproachisthatitisincrediblyeasytocustomize
+        anypieceof our website. 
+        The downside is Django requires a bit more out-of-the-box code than somecompetingweb
+        frameworks.Asyoubecomemoreandmoreexperiencedinweb development, the wisdom of Django’s 
+        approach will ring 
+        true.
+        TheupsidetoDjango’sapproachisthatitisincrediblyeasytocustomize
+        anypieceof our website. 
+        The downside is Django requires a bit more out-of-the-box code than somecompetingweb
+        frameworks.Asyoubecomemoreandmoreexperiencedinweb development, the wisdom of Django’s 
+        approach will ring 
+        true.
+        </p>
+    </div>
+  </div>
+  {% include 'footer.html' %}
+</body>
+</html>

@@ -1,0 +1,81 @@
+@font-face {
+    font-family: "Century_Gothic_Regular";
+    src: url("../fonts/Century_Gothic_Regular.ttf");
+}
+
+
+.about-suggest-container {
+    min-height: 410px;
+    max-width: 94%;
+    margin: auto;
+    margin-top: 4%;
+}
+
+#right-div,
+#left-div {
+    background-color: white;
+    width: 45%;
+    border: none;
+    overflow: hidden;
+}
+
+#right-div {
+    margin-left: 55%;
+}
+
+#right-div h1,
+#left-div h1 {
+    padding: 1% 0 0 5%;
+    word-spacing: 8px;
+}
+
+#right-div p,
+#left-div p {
+    padding: 2% 5% 5% 5%;
+    line-height: 135%;
+}
+
+#suggest-intro-paragraph {
+    max-width: 50%;
+    margin: auto;
+    background-color: rgba(255, 255, 255, 0.6);
+}
+
+#suggest-intro-paragraph p {
+    text-align: center;
+    font-size: 18px;
+    padding: 8%;
+    font-weight: 600;
+    font-family: "Century_Gothic_Regular";
+}
+
+#suggest-form {
+    margin: 5% 0 0 0;
+    text-align: center;
+}
+
+#suggest-form input {
+    width: 30%;
+    min-height: 20%;
+    font-size: 15px;
+    padding: 1%;
+}
+
+#suggest-form button {
+    margin: 2% 0 6% 0;
+    border: 1px solid transparent;
+    border-radius: 10px;
+    padding: 9px 17px;
+    color: white;
+    font-weight: 700;
+    background-color: #7a0e0e;
+    transition: 0.6s;
+    cursor: pointer;
+    font-size: 17px;
+}
+
+#suggest-form button:hover {
+    border: 1px solid black;
+    background-color: transparent;
+    color: black;
+}
