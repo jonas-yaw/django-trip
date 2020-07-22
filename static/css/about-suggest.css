@@ -79,3 +79,55 @@
     background-color: transparent;
     color: black;
 }
+
+@media screen and (max-width:768px) {
+    .about-suggest-container {
+        max-width: 85%;
+    }
+
+    #right-div,
+    #left-div {
+        background-color: white;
+        width: 80%;
+        border: none;
+        overflow: hidden;
+    }
+
+    #right-div {
+        margin: 15% 0 20% 20%;
+    }
+
+    #right-div h1,
+    #left-div h1 {
+        font-size: 28px;
+    }
+
+    #right-div p,
+    #left-div p {
+        font-size: 16px;
+    }
+
+    #suggest-intro-paragraph {
+        max-width: 80%;
+    }
+
+    #suggest-intro-paragraph p {
+        font-size: 15px;
+    }
+
+    #suggest-form {
+        margin: 10% 0 0 0;
+    }
+
+    #suggest-form input {
+        width: 70%;
+        height: 25%;
+    }
+
+    #suggest-form button {
+        margin: 5% 0 8% 0;
+        padding: 8px 17px;
+        font-size: 15px;
+    }
+
+}

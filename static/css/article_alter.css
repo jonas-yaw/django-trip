@@ -2,6 +2,11 @@
 #delete-form-div {
     max-width: 95%;
     margin: auto;
+    min-height: 380px;
+}
+
+#article-update-div{
+    margin-bottom: 6%;
 }
 
 .article-create-div h1 {
@@ -54,4 +59,63 @@
     background-color: #7a0e0e;
     color: white;
     padding: 1%;
+}
+
+@media screen and (max-width:768px) {
+
+    .article-create-div,
+    #delete-form-div {
+        max-width: 85%;
+        margin: auto;
+    }
+
+    #article-update-div{
+        margin-bottom: 10%;
+    }
+    
+    .article-create-div h1 {
+        margin: 6% 0 8% 0;
+        font-size: 28px;
+    }
+
+    .article-create-div form {
+        text-align: center;
+        width: 50%;
+    }
+
+    .article-create-div form label {
+        float: left;
+    }
+
+    .article-create-div form button,
+    #delete-form-div form button {
+        padding: 8px 18px;
+    }
+
+    #delete-form-div {
+        height: 55%;
+        margin-top: 7%;
+    }
+
+    .article-create-div form button:hover,
+    #delete-form-div form button:hover {
+        background-color: transparent;
+        color: black;
+    }
+
+    .clear-padding {
+        clear: both;
+    }
+
+    #delete-form-div p {
+        text-align: left;
+    }
+
+    #article-update-div form label {
+        font-weight: bold;
+        background-color: #7a0e0e;
+        color: white;
+        padding: 1%;
+    }
+
 }

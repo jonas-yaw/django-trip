@@ -2,9 +2,9 @@
   <nav>
     <div id="first-half-div">
       <ul>
-        <li class="one-half-link"><a href="{% url 'home' %}">HOME</a></li>
-        <li class="one-half-link"><a href="{% url 'articles_list' %}">ARTICLES</a></li>
-        <li class="one-half-link"><a href="{% url 'about' %}">ABOUT</a></li>
+        <li class="one-half-link"><a href="{% url 'home' %}" id='home-link'>HOME</a></li>
+        <li class="one-half-link"><a href="{% url 'articles_list' %}" id='article-link'>ARTICLES</a></li>
+        <li class="one-half-link"><a href="{% url 'about' %}" id='about-link'>ABOUT</a></li>
       </ul>
     </div>
     <div id="logo-div">
@@ -12,13 +12,32 @@
     </div>
     <div id="second-half-div">
       <ul>
-        <li class="two-half-link"><a href="{% url 'suggest' %}">SUGGEST</a></li>
+        <li class="two-half-link"><a href="{% url 'suggest' %}" id='suggest-link'>SUGGEST</a></li>
         {% if user.is_authenticated%}
         <li class="two-half-link"><a href="{% url 'logout' %}">LOG OUT</a></li>
         {% else %}
-        <li class="two-half-link"><a href="{% url 'login' %}">LOG IN</a></li>
+        <li class="two-half-link"><a href="{% url 'login' %}" id='login-link'>LOG IN</a></li>
         {% endif %}
       </ul>
     </div>
+
+    <div id='mobile-navbar-div'>
+      <div id='menu-div'><div>
+      <div id='cancel-menu-div'><div>
+      <div id='dropdown-content'>
+        <ul>
+          <li class="one-half-link"><a href="{% url 'home' %}">HOME</a></li>
+          <li class="one-half-link"><a href="{% url 'articles_list' %}">ARTICLES</a></li>
+          <li class="one-half-link"><a href="{% url 'about' %}">ABOUT</a></li>
+          <li class="two-half-link"><a href="{% url 'suggest' %}">SUGGEST</a></li>
+          {% if user.is_authenticated%}
+          <li class="two-half-link"><a href="{% url 'logout' %}">LOG OUT</a></li>
+          {% else %}
+          <li class="two-half-link"><a href="{% url 'login' %}">LOG IN</a></li>
+          {% endif %}
+        </ul>
+      </div>
+    </div>
+
   </nav>
 </header>

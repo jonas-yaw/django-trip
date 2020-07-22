@@ -212,3 +212,148 @@
   background-color: transparent;
   color: black;
 }
+
+
+@media screen and (max-width:768px) {
+  #article-heading-div {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 0 3.5% 0;
+  }
+
+  #article-detail-heading-div {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 5%;
+  }
+
+  #article-heading-div h1 {
+    font-size: 35px;
+    margin: 6% 0 6% 0;
+  }
+
+  #article-title-div {
+    width: 70%;
+  }
+
+  #article-title-div h1 {
+    margin: 0;
+    text-transform: uppercase;
+    font-family: "Century_Gothic_Regular";
+    word-spacing: 2px;
+    font-size: 25px;
+  }
+
+  #article-title-div h1 span {
+    font-size: 14px;
+    margin-left: 1%;
+  }
+
+  #new-link-div {
+    margin: 0 2% 0 0;
+  }
+
+  #article-edit-div{
+    margin: 3% 0% 0 10%;
+    height: 70px;
+  }
+
+  #new-link-div a {
+    font-weight: 800;
+    font-size: 18px;
+  }
+
+  #new-link-div a:hover,
+  #article-edit-div a:hover {
+    color: #7a0e0e;
+  }
+
+  .article-inner-divs {
+    width: 70%;
+  }
+
+  .article-inner-divs:nth-child(even) {
+    margin: 5% 0 5% 20%;
+    width: 68%;
+  }
+
+  .article-inner-divs div {
+    margin: 6%;
+  }
+
+  .article-inner-divs h3 {
+    font-size: 18px;
+  }
+
+  .article-inner-divs p {
+    font-size: 15px;
+  }
+
+  .button-link-div a button {
+    font-size: 12px;
+  }
+
+  #article-body-div {
+    margin: 10% 0% 20% 1%;
+  }
+
+  .article-image-div {
+    width: 140px;
+    height: 140px;
+    margin: 5%;
+  }
+
+  .article-paragraph {
+    padding: 6% 6% 3%6%;
+  }
+
+  .clear-padding {
+    clear: both;
+  }
+
+  #comment-intro-paragraph {
+    font-size: 15px;
+  }
+
+  .comment-div {
+    margin: 1% 12% 1% 4%;
+    width: 100%;
+  }
+
+  .comment-div div p {
+    padding: 0 6% 1% 6%;
+    margin: 5px;
+  }
+
+  .comment-paragraph {
+    border-bottom: 1px solid rgba(82, 80, 80, 0.5);
+  }
+
+  .author-paragraph {
+    font-size: 15px;
+    font-weight: 600;
+  }
+
+  #comment-form {
+    margin: 2% 12% 2% 9%;
+    width: 80%
+  }
+
+  #comment-form input {
+    font-size: 14px;
+    padding: 2% 4% 2% 4%;
+    width: 100%;
+  }
+
+  #comment-form button {
+    margin: 4% 0 4% 0;
+    font-size: 14px;
+  }
+
+  #comment-form button:hover {
+    border: 1px solid black;
+    background-color: transparent;
+    color: black;
+  }
+
+}

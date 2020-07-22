@@ -24,10 +24,6 @@ header nav {
   margin-top: 1%;
 }
 
-header nav div {
-  width: 33%;
-}
-
 header nav div ul {
   list-style: none;
 }
@@ -49,6 +45,11 @@ header nav div ul li a:hover {
   color: #7a0e0e;
 }
 
+#first-half-div,
+#second-half-div {
+  width: 33%;
+}
+
 #first-half-div ul li {
   margin: 3% 12% 0 0;
 }
@@ -63,6 +64,7 @@ header nav div ul li a:hover {
 
 #logo-div {
   text-align: center;
+  width: 33%;
 }
 
 #logo-div a {
@@ -78,6 +80,32 @@ header nav div ul li a:hover {
   font-size: 18px;
 }
 
+#mobile-navbar-div {
+  display: none;
+  width: 0;
+}
+
+#menu-div {
+  background-image: url(../img/menu.png);
+  background-position: center;
+  background-size: cover;
+  width: 40px;
+  height: 40px;
+  float: right;
+  margin: 4% 8% 0 0;
+}
+
+#cancel-menu-div {
+  background-image: url(../img/cancel.png);
+  background-position: center;
+  background-size: cover;
+  width: 25px;
+  height: 25px;
+  float: right;
+  margin: 17% 19% 0 0;
+  visibility: hidden;
+}
+
 /* footer styles */
 footer {
   margin-top: 3%;
@@ -90,6 +118,7 @@ footer div {
 footer div p {
   font-size: 16px;
   font-weight: bold;
+  word-spacing: 3px;
 }
 
 footer div p a {
@@ -108,4 +137,111 @@ footer div p a {
 button:focus,
 a:focus {
   outline: none;
+}
+
+@media screen and (max-width:768px) {
+
+  /* header styles */
+  header {
+    margin-bottom: 3%;
+  }
+
+  header nav div {
+    width: 100%;
+  }
+
+  header nav div ul li a {
+    font-weight: 700;
+  }
+
+
+  #first-half-div,
+  #second-half-div {
+    display: none;
+  }
+
+  #logo-div {
+    width: 50%;
+    margin-top: 1%;
+  }
+
+  #logo-div a {
+    font-size: 20px;
+    font-weight: bold;
+    line-height: 30px;
+    margin-left: 7%;
+  }
+
+  #logo-div a span {
+    font-size: 14px;
+  }
+
+  #mobile-navbar-div {
+    display: block;
+  }
+
+  #mobile-navbar-div {
+    width: 50%;
+    position: relative;
+  }
+
+  #dropdown-content {
+    display: none;
+    width: 80%;
+    position: absolute;
+    z-index: 1;
+    border: 1px solid #707070;
+    background-color: rgba(255, 255, 255, 0.9);
+    right: 16px;
+    margin-top: 18%;
+    padding: 6px 10px;
+  }
+
+
+  #dropdown-content ul {
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    text-align: center;
+  }
+
+  #dropdown-content ul li {
+    border-bottom: 1px solid #707070;
+    width: 100%;
+    margin: 0 0 5% 0;
+  }
+
+  /* footer styles */
+  footer {
+    margin-top: 3%;
+  }
+
+  footer div {
+    text-align: center;
+  }
+
+  footer div p {
+    font-size: 16px;
+    font-weight: bold;
+  }
+
+  footer div p a {
+    text-decoration: none;
+    color: black;
+  }
+
+  #twitter {
+    color: blue;
+  }
+
+  #copright-paragraph {
+    font-size: 14px;
+  }
+
+  button:focus,
+  a:focus {
+    outline: none;
+  }
+
+
 }

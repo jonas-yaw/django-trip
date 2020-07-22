@@ -47,21 +47,22 @@
 #signup-div {
   text-align: center;
   font-weight: 800;
-  font-size: 20px;
+  font-size: 30px;
   margin: 6% 0 0 0;
+  font-family: "CHILLER";
 }
 
 #signup-div button {
-  padding: 12px 14px;
+  padding: 4px 14px;
   border: transparent;
-  border-radius: 10px;
-  font-weight: bold;
+  font-weight: 800;
   color: white;
   background-color: #7a0e0e;
   margin-right: 5px;
   cursor: pointer;
   transition: 0.6s;
-  font-size: 15px;
+  font-size: 35px;
+  font-family: "CHILLER";
 }
 
 #signup-div button:hover,
@@ -98,4 +99,62 @@
   background-size: cover;
   background-repeat: no-repeat;
   margin: 16% 0 8% 0;
+}
+
+@media screen and (max-width:768px) {
+  #home-container {
+    display: flex;
+    min-height: 440px;
+    flex-flow: row wrap;
+  }
+
+  .one-half-section,
+  .two-half-section {
+    width: 100%;
+    height: 450px;
+  }
+
+  #logo-representation div {
+    width: 150px;
+    height: 150px;
+    margin-top: 6%;
+    margin-bottom: 3%;
+  }
+
+  #articles-button-div {
+    max-width: 50%;
+    margin: auto;
+  }
+
+  #articles-button-div button {
+    padding: 10px 18px;
+    font-size: 22px;
+    margin: 3% 18% 14% 0;
+  }
+
+  #signup-div {
+    font-weight: 700;
+    font-size: 28px;
+  }
+
+  #signup-div button {
+    padding: 4px 14px;
+    font-weight: 700;
+    font-size: 30px;
+  }
+
+
+  .inside-div-2 p {
+    width: 50%;
+    margin: 40% 0 0 40%;
+    font-size: 16px;
+    font-weight: 900;
+  }
+
+  .home-image-div {
+    width: 140px;
+    height: 140px;
+    margin: 40% 0 8% 0;
+  }
+
 }
