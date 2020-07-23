@@ -127,7 +127,7 @@ LOGIN_REDIRECT_URL = "home"
 LOGOUT_REDIRECT_URL = "home"
 
 AUTH_USER_MODEL = "accounts.CustomUser"
-MEDIA_ROOT = os.path.join(BASE_DIR, "static/upload_images")
+MEDIA_ROOT = os.path.join(BASE_DIR, "media")
 MEDIA_URL = "/media/"
 EMAIL_BACKEND = "django.core.mail.backends.console.EmailBackend"
 django_heroku.settings(locals())
