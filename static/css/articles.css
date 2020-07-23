@@ -233,7 +233,7 @@
   }
 
   #article-title-div {
-    width: 70%;
+    width: 80%;
   }
 
   #article-title-div h1 {
@@ -316,8 +316,8 @@
   }
 
   .comment-div {
-    margin: 1% 12% 1% 4%;
-    width: 100%;
+    margin: 1% 12% 5% 4%;
+    width: 80%;
   }
 
   .comment-div div p {
@@ -335,7 +335,7 @@
   }
 
   #comment-form {
-    margin: 2% 12% 2% 9%;
+    margin: 2% 12% 2% 8%;
     width: 80%
   }
 

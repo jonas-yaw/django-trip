@@ -85,21 +85,25 @@
         max-width: 85%;
     }
 
+    #about-div {
+        margin-top: 20%;
+    }
+
     #right-div,
     #left-div {
         background-color: white;
-        width: 80%;
+        width: 90%;
         border: none;
         overflow: hidden;
     }
 
     #right-div {
-        margin: 15% 0 20% 20%;
+        margin: 15% 0 20% 10%;
     }
 
     #right-div h1,
     #left-div h1 {
-        font-size: 28px;
+        font-size: 26px;
     }
 
     #right-div p,

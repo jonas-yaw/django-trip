@@ -39,6 +39,10 @@ input:focus {
   outline: none;
 }
 
+.sub-paragraph {
+  text-align: center;
+}
+
 .sub-paragraph a {
   color: black;
 }
@@ -80,7 +84,8 @@ button:hover {
   width: 70%;
 }
 
-#one-div form {
+#one-div form,
+#login-paragraph-o {
   width: 50%;
   margin-left: 47%;
 }
@@ -102,55 +107,56 @@ button:hover {
   #title-div {
     margin: 10% 0 8% 0;
   }
-  
+
   #title-div-2 {
     margin: 0 0 2% 0;
   }
-  
+
   #title-div h1,
   #title-div-2 h1 {
     font-size: 45px;
   }
-  
+
   .input-fields {
     font-size: 14px;
   }
-    
+
   button {
     padding: 8px 20px;
     font-size: 15px;
   }
-    
+
   #signup-main-div {
     max-width: 90%;
     margin: auto;
     text-align: center;
   }
-  
+
   #two-div-container {
     display: flex;
     margin-bottom: 3%;
     flex-flow: row wrap;
   }
-  
+
   #one-div {
     width: 100%;
   }
-  
-  #one-div form {
+
+  #one-div form,
+  #login-paragraph-o {
     width: 100%;
     margin-left: 0%;
     text-align: center;
   }
-  
+
   #two-div {
     width: 100%;
     margin-bottom: 8%;
   }
-  
+
   #two-div p {
-    margin: 15% 0 0 20%;
+    margin: 10% 0 0 20%;
     font-size: 18px;
   }
-  
+
 }
