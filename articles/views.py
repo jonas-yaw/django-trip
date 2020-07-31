@@ -16,7 +16,7 @@ class ArticleListView(ListView):
 class ArticleCreateView(LoginRequiredMixin, CreateView):
     template_name = "article_create.html"
     model = Article
-    fields = ("title", "description", "image", "body")
+    fields = ("title", "description", "body")
 
     def dispatch(self, request, *args, **kwargs):
         if self.request.user != CustomUser.objects.get(username="Jonas"):
@@ -27,7 +27,7 @@ class ArticleCreateView(LoginRequiredMixin, CreateView):
 class ArticleUpdateView(LoginRequiredMixin, UpdateView):
     template_name = "article_update.html"
     model = Article
-    fields = ("title", "description", "image", "body")
+    fields = ("title", "description", "body")
 
     def dispatch(self, request, *args, **kwargs):
         if self.request.user != CustomUser.objects.get(username="Jonas"):
