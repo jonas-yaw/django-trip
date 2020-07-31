@@ -133,19 +133,9 @@
   overflow: hidden;
 }
 
-.article-image-div {
-  width: 200px;
-  height: 200px;
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
-  border: 1px solid black;
-  float: left;
-  margin: 3%;
-}
-
 .article-paragraph {
   padding: 6% 6% 3%6%;
+  line-height: 140%;
 }
 
 .clear-padding {
@@ -233,7 +223,7 @@
   }
 
   #article-title-div {
-    width: 80%;
+    width: 90%;
   }
 
   #article-title-div h1 {
@@ -253,7 +243,7 @@
     margin: 0 2% 0 0;
   }
 
-  #article-edit-div{
+  #article-edit-div {
     margin: 3% 0% 0 10%;
     height: 70px;
   }
@@ -297,11 +287,6 @@
     margin: 10% 0% 20% 1%;
   }
 
-  .article-image-div {
-    width: 140px;
-    height: 140px;
-    margin: 5%;
-  }
 
   .article-paragraph {
     padding: 6% 6% 3%6%;

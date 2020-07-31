@@ -13,7 +13,6 @@ class Article(models.Model):
 
     title = models.CharField(max_length=144)
     description = models.TextField()
-    image = models.ImageField()
     body = models.TextField()
     date = models.DateTimeField(auto_now_add=True)
     author = models.CharField(default=author_default, max_length=144)

@@ -37,8 +37,7 @@
         </div>
 
         <div id='article-body-div'>
-            <div class='article-image-div' style="background-image: url({{ article.image.url }});"></div>
-            <p class='article-paragraph'>{{ article.body }}</p>
+            <p class='article-paragraph'>{{ article.body|linebreaksbr }}</p>
             <div class='clear-padding'></div>
             <p id='comment-intro-paragraph'>COMMENTS</p>
             {% for comment in article.comment_set.all %}
